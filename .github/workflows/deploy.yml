@@ -47,12 +47,12 @@ jobs:
         run: |
           yarn install
 
-      - name: Run yarn rollup
+      - name: Set up .npmrc
         run: |
-          yarn rollup
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm
+        run: |
+          npm publish --access public  # Ensure this is set according to your package's visibility
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm publish
