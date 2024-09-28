@@ -19,9 +19,9 @@ export default function println<T>({
 
   const logMessage = showFunctionOrigin
     ? callerFunctionName
-      ? `${helper} (called from function: ${callerFunctionName}) =>\n${colorCode}${formattedLog}${colorCodes.reset}`
-      : `${helper} =>\n${colorCode}${formattedLog}${colorCodes.reset}`
-    : `${helper} =>\n${colorCode}${formattedLog}${colorCodes.reset}`;
+      ? `${colorCode}${helper} (called from function: ${callerFunctionName}) =>\n${colorCode}${formattedLog}${colorCodes.reset}`
+      : `${colorCode}${helper} =>\n${colorCode}${formattedLog}${colorCodes.reset}`
+    : `${colorCode}${helper} =>\n${colorCode}${formattedLog}${colorCodes.reset}`;
 
   console.log(logMessage);
 }

@@ -6,7 +6,32 @@ export type LogColor =
   | "blue"
   | "magenta"
   | "cyan"
-  | "white";
+  | "black"
+  // Bright foreground colors
+  | "brightRed"
+  | "brightGreen"
+  | "brightYellow"
+  | "brightBlue"
+  | "brightMagenta"
+  | "brightCyan"
+  | "brightWhite"
+  // Background colors
+  | "bgRed"
+  | "bgGreen"
+  | "bgYellow"
+  | "bgBlue"
+  | "bgMagenta"
+  | "bgCyan"
+  | "bgWhite"
+  | "bgBlack"
+  // Bright background colors
+  | "bgBrightRed"
+  | "bgBrightGreen"
+  | "bgBrightYellow"
+  | "bgBrightBlue"
+  | "bgBrightMagenta"
+  | "bgBrightCyan"
+  | "bgBrightWhite";
 
 export type FunctionProps<T> = {
   helper: string;
