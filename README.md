@@ -79,8 +79,6 @@ This will output the following to the console:
 
 ## API
 
-## API
-
 | **Prop**             | **Description**                                                                                                                        | **Default**         |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
 | `helper`             | A string that describes the context of the log message. It helps identify what the logged data represents.                             | `""` (empty string) |
