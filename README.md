@@ -54,8 +54,6 @@ println({
 });
 ```
 
-### Minimal usage
-
 This will output the following to the console:
 
 ```bash
@@ -67,6 +65,8 @@ User Data (called from function: yourFunctionName) =>
 }
 
 ```
+
+### Minimal usage
 
 ```typescript
 // Using println without helper text, function name or color
