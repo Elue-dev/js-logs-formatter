@@ -1,12 +1,17 @@
 {
   "name": "js-logs-formatter",
-  "version": "0.1.2",
-  "description": "Logger library for readable server logs and tools like React Native and Next.js server components",
+  "version": "0.4.8",
+  "description": "Logger library for readable server logs and tools like React Native and Next.js server components. Can also be used in SPAs",
   "main": "dist/index.js",
+  "type": "module",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "author": "elue-dev",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elue-dev/js-logs-formatter.git"
+  },
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
   },

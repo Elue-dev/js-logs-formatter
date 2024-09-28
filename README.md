@@ -30,7 +30,7 @@ npm i js-logs-formatter
 To use JS Logs Formatter, import the `println` function and call it with a helper string and the data you want to log.
 
 ```typescript
-import println from "js-logs-formatter";
+import { println } from "js-logs-formatter";
 
 // Example data
 const user = {
@@ -39,24 +39,32 @@ const user = {
   active: false,
 };
 
-// Using println
-println("User Data", user);
+// Using println with a helper text and color
+println({
+  helper: "User Data",
+  data: user,
+  color: "green", // Optional color for the log
+  showFunctionOrigin: true, // Show the calling function (default is true)
+});
 ```
 
 This will output the following to the console:
 
 ```bash
-User Data =>
+User Data (called from function: yourFunctionName) =>
 {
   "name": "Jane Doe",
   "age": 28,
   "active": false
 }
+
 ```
 
 ```typescript
-// Using println without helper text
-println("User Data", user, false);
+// Using println without helper text, function name or color
+println({
+  data: user,
+});
 ```
 
 This will output the following to the console:
@@ -71,9 +79,14 @@ This will output the following to the console:
 
 ## API
 
-- helper: A string that describes the context of the log message. It helps identify what the logged data represents.
-- data: The data you want to log, which can be of any type (e.g., object, array, string).
-- shouldShowHelper: Determines whethr the logs would show the helper text or not.
+## API
+
+| **Prop**             | **Description**                                                                                                                        | **Default**         |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| `helper`             | A string that describes the context of the log message. It helps identify what the logged data represents.                             | `""` (empty string) |
+| `data`               | The data you want to log, which can be of any type (e.g., object, array, string).                                                      | N/A                 |
+| `color`              | The color applied to the logged data. Available options include `reset`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`. | `reset`             |
+| `showFunctionOrigin` | Determines whether the logs will show the name of the function where `println` was called.                                             | `true`              |
 
 ## Contributing
 
@@ -82,7 +95,3 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## License
 
 This project is licensed under the MIT License.
-
-```
-
-```

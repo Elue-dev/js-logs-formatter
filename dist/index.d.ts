@@ -1,3 +1,5 @@
-declare function println(helper: string, data: any): void;
+type LogColor = "reset" | "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white";
 
-export { println as default };
+declare function println<T>(helper: string, data: T, color?: LogColor, addStackTrace?: boolean): void;
+
+export { println };

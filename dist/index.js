@@ -1,2 +1,2 @@
-"use strict";module.exports=function(o,n){var t=JSON.stringify(n,null,2);console.log("".concat(o," =>"),t)};
+"use strict";var n={reset:"[0m",red:"[31m",green:"[32m",yellow:"[33m",blue:"[34m",magenta:"[35m",cyan:"[36m",white:"[37m"};exports.println=function(o,c,t,a){var e;void 0===t&&(t="reset"),void 0===a&&(a=!0);var l=JSON.stringify(c,null,2),r=null===(e=(new Error).stack)||void 0===e?void 0:e.split("\n"),i=(r?r[2]:"unknown").match(/at (\S+) \(([^)]+)\)/),m=i?i[2]:"unknown location",s=i?i[1]:"unknown function",u=n[t];a?console.log("".concat(u).concat(o," (called from: ").concat(s," at ").concat(m,") =>\n").concat(l).concat(u)):console.log("".concat(u).concat(o," =>\n").concat(l).concat(u))};
 //# sourceMappingURL=index.js.map

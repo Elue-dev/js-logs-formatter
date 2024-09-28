@@ -1,2 +1,2 @@
-function n(n,o){var l=JSON.stringify(o,null,2);console.log("".concat(n," =>"),l)}export{n as default};
+var n={reset:"[0m",red:"[31m",green:"[32m",yellow:"[33m",blue:"[34m",magenta:"[35m",cyan:"[36m",white:"[37m"};function o(o,c,t,a){var e;void 0===t&&(t="reset"),void 0===a&&(a=!0);var l=JSON.stringify(c,null,2),r=null===(e=(new Error).stack)||void 0===e?void 0:e.split("\n"),i=(r?r[2]:"unknown").match(/at (\S+) \(([^)]+)\)/),m=i?i[2]:"unknown location",u=i?i[1]:"unknown function",s=n[t];a?console.log("".concat(s).concat(o," (called from: ").concat(u," at ").concat(m,") =>\n").concat(l).concat(s)):console.log("".concat(s).concat(o," =>\n").concat(l).concat(s))}export{o as println};
 //# sourceMappingURL=index.mjs.map
