@@ -1,6 +1,6 @@
 {
   "name": "js-logs-formatter",
-  "version": "0.5.9",
+  "version": "0.6.9",
   "description": "Logger library for readable server logs, useful for tools like React Native and Next.js server components. Also useful for SPAs",
   "main": "dist/index.js",
   "type": "module",
@@ -13,7 +13,8 @@
     "url": "git+https://github.com/Elue-dev/js-logs-formatter.git"
   },
   "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "test": "jest"
   },
   "private": false,
   "dependencies": {
@@ -25,8 +26,12 @@
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.0",
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
     "rollup": "^4.22.5",
     "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4"
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
   }
 }

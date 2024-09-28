@@ -8,7 +8,7 @@ import dts from "rollup-plugin-dts";
 
 export default [
   {
-    input: "./index.ts",
+    input: "./lib/index.ts",
     output: [
       {
         file: pkg.main,
@@ -30,7 +30,7 @@ export default [
     ],
   },
   {
-    input: "./index.ts",
+    input: "./lib/index.ts",
     output: [{ file: pkg.types }],
     plugins: [dts.default()],
   },
