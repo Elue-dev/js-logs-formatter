@@ -67,6 +67,7 @@ This will output the following to the console:
   "age": 28,
   "active": false
 }
+```
 
 ## API
 
@@ -81,4 +82,7 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 ## License
 
 This project is licensed under the MIT License.
+
+```
+
 ```
