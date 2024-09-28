@@ -19,10 +19,10 @@ You can install **JS Logs Formatter** via npm or yarn:
 yarn add js-logs-formatter
 ```
 
-OR
+using npm:
 
 ```bash
-npm i js-logs-formatter
+npm install js-logs-formatter
 ```
 
 Expo
@@ -53,6 +53,8 @@ println({
   showFunctionOrigin: true, // Show the calling function (default is true)
 });
 ```
+
+### Minimal usage
 
 This will output the following to the console:
 
