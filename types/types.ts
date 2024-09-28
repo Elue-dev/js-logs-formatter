@@ -33,7 +33,7 @@ export type LogColor =
   | "bgBrightCyan"
   | "bgBrightWhite";
 
-export type FunctionProps<T> = {
+export type PrintLn<T> = {
   helper: string;
   data: T;
   color?: LogColor;

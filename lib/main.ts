@@ -1,12 +1,12 @@
 import { colorCodes } from "./colors";
-import { FunctionProps } from "../types/types";
+import { PrintLn } from "../types/types";
 
 export default function println<T>({
   helper,
   data,
   color = "reset",
   showFunctionOrigin = true,
-}: FunctionProps<T>) {
+}: PrintLn<T>) {
   const formattedLog = JSON.stringify(data, null, 2);
 
   const stack = new Error().stack?.split("\n");
