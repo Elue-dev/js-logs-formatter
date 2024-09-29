@@ -33,7 +33,7 @@ npx expo install js-logs-formatter
 
 ## Usage
 
-To use JS Logs Formatter, import the `println` function and call it with a helper string and the data you want to log.
+To use JS Logs Formatter, import the `println` function and call it with a helper string, color and the data you want to log.
 
 ```typescript
 import { println } from "js-logs-formatter";

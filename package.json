@@ -33,5 +33,18 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2"
-  }
+  },
+  "keywords": [
+    "logger",
+    "logging",
+    "server logs",
+    "React Native",
+    "Next.js",
+    "SPA",
+    "browser log",
+    "JavaScript",
+    "TypeScript",
+    "Expo",
+    "Expo Logger"
+  ]
 }

@@ -47,6 +47,14 @@ jobs:
         run: |
           yarn install
 
+      - name: Remove dist folder
+        run: |
+          rm -rf dist
+
+      - name: Generate dist folder
+        run: |
+          yarn rollup
+
       - name: Publish to npm
         run: |
           npm publish --access=public
