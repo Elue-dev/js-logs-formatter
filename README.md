@@ -123,7 +123,29 @@ This will output the following to the console:
 {
   "name": "Jane Doe",
   "age": 28,
-  "active": false
+  "active": false,
+  "email": "janedoe@example.com",
+  "phone": "+1234567890",
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "zipCode": "12345"
+  },
+  "preferences": {
+    "newsletter": true,
+    "notifications": {
+      "email": true,
+      "sms": false
+    }
+  },
+  "createdAt": "2022-01-15T14:30:00Z",
+  "lastLogin": "2023-09-28T10:00:00Z",
+  "roles": [
+    "user",
+    "admin"
+  ],
+  "points": 1500
 }
 ```
 
