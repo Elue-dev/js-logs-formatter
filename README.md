@@ -1,6 +1,6 @@
 # JS Logs Formatter
 
-**JS Logs Formatter** is a lightweight logging utility designed to format server logs for better readability in tools like React Native and Next.js server components. Also useful for SPAs. It aims to enhance your debugging experience by providing structured and easy-to-read log outputs.
+**JS Logs Formatter** is a lightweight logging utility designed to format server logs for better readability in tools like React Native, Node.js and Next.js server components. Also useful for SPAs. It aims to enhance your debugging experience by providing structured and easy-to-read log outputs.
 
 ## Table of Contents
 
