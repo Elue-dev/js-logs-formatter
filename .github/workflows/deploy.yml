@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches:
       - main
@@ -42,17 +41,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "18"
+          registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: |
           yarn install
 
-      - name: Set up .npmrc
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-
       - name: Publish to npm
         run: |
-          npm publish --access public  # Ensure this is set according to your package's visibility
+          npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
