@@ -7,6 +7,7 @@ export type LogColor =
   | "magenta"
   | "cyan"
   | "black"
+
   // Bright foreground colors
   | "brightRed"
   | "brightGreen"
@@ -15,6 +16,7 @@ export type LogColor =
   | "brightMagenta"
   | "brightCyan"
   | "brightWhite"
+
   // Background colors
   | "bgRed"
   | "bgGreen"
@@ -24,6 +26,7 @@ export type LogColor =
   | "bgCyan"
   | "bgWhite"
   | "bgBlack"
+
   // Bright background colors
   | "bgBrightRed"
   | "bgBrightGreen"
