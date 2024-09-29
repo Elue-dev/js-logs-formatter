@@ -18,13 +18,3 @@ if [ $? -ne 0 ]; then
   echo "Yarn rollup failed. Exiting."
   exit 1
 fi
-
-echo "Publishing to npm..."
-npm publish
-
-if [ $? -ne 0 ]; then
-  echo "npm publish failed. Exiting."
-  exit 1
-fi
-
-echo "Changes have been pushed and package published successfully!"
