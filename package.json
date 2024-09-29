@@ -1,6 +1,6 @@
 {
   "name": "js-logs-formatter",
-  "version": "0.7.01",
+  "version": "0.7.1",
   "description": "Logger library for readable server logs, useful for tools like React Native, Node.js and Next.js server components. Also useful for SPAs with browser log",
   "main": "dist/index.js",
   "type": "module",
