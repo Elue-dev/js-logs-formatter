@@ -4,8 +4,9 @@ type PrintLn<T> = {
     data: T;
     color?: LogColor;
     showFunctionOrigin?: boolean;
+    writeToFile?: boolean;
 };
 
-declare function println<T>({ helper, data, color, showFunctionOrigin, }: PrintLn<T>): void;
+declare function println<T>({ helper, data, color, showFunctionOrigin, writeToFile, }: PrintLn<T>): void;
 
 export { println };
