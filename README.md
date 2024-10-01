@@ -106,7 +106,7 @@ User Data (called from function: yourFunctionName at line yourLineNumber) =>
 }
 ```
 
-Note: Function name would not be printed out if called from the global context
+**Note:** Due to differences in how React Native handles stack traces, the accuracy of line numbers and function names can vary. While the `println` function captures file names and line numbers accurately in Node.js environments, in React Native, the stack trace format may include network-related information or different formatting, making line numbers less predictable. For best results, focus on the file name and function name when using this in a React Native environment.
 
 ### Minimal usage
 
