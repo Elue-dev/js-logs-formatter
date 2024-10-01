@@ -7,6 +7,6 @@ type PrintLn<T> = {
     writeToFile?: boolean;
 };
 
-declare function println<T>({ helper, data, color, showFunctionOrigin, writeToFile, }: PrintLn<T>): void;
+declare function println<T>({ helper, data, color, showFunctionOrigin, }: PrintLn<T>): void;
 
 export { println };
