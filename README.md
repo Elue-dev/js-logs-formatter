@@ -70,7 +70,7 @@ println({
   data: user,
   color: "green", // Optional color for the log
   showFunctionOrigin: true, // Show the calling function (default is true)
-  writeToFile: true, // Determines whether to write your logs to a file (default is false)
+  writeToFile: true, // Determines whether to write your logs to a file (default is false). Not supported in react native
 });
 ```
 
@@ -152,13 +152,13 @@ This will output the following to the console:
 
 ## API
 
-| **Prop**             | **Description**                                                                                            | **Default**         |
-| -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------- |
-| `helper`             | A string that describes the context of the log message. It helps identify what the logged data represents. | `""` (empty string) |
-| `data`               | The data you want to log, which can be of any type (e.g., object, array, string).                          | N/A                 |
-| `color`              | The color applied to the logged data. Available color options are listed [here](#available-colors).        | `reset`             |
-| `showFunctionOrigin` | Determines whether the logs will show the name of the function where `println` was called.                 | `true`              |
-| `writeToFile`        | If set to `true`, the log message will be written to a file named `app_logs.txt` in the current directory. | `false`             |
+| **Prop**             | **Description**                                                                                                                                                    | **Default**         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------- |
+| `helper`             | A string that describes the context of the log message. It helps identify what the logged data represents.                                                         | `""` (empty string) |
+| `data`               | The data you want to log, which can be of any type (e.g., object, array, string).                                                                                  | N/A                 |
+| `color`              | The color applied to the logged data. Available color options are listed [here](#available-colors).                                                                | `reset`             |
+| `showFunctionOrigin` | Determines whether the logs will show the name of the function where `println` was called.                                                                         | `true`              |
+| `writeToFile`        | If set to `true`, the log message will be written to a file named `app_logs.txt` in the current directory. Note: this feature is not supported in React Native yet | `false`             |
 
 ## Available Colors
 

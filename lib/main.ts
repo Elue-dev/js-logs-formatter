@@ -1,9 +1,10 @@
 import { colorCodes } from "./colors";
 import { PrintLn } from "../types/types";
-import * as fs from "fs";
-import * as path from "path";
 
-export default function println<T>({
+let fs: typeof import("fs") | undefined;
+let path: typeof import("path") | undefined;
+
+export default async function println<T>({
   helper,
   data,
   color = "reset",
@@ -12,6 +13,11 @@ export default function println<T>({
 }: PrintLn<T>) {
   const formattedLog = JSON.stringify(data, null, 2);
 
+  if (typeof window === "undefined") {
+    fs = await import("fs");
+    path = await import("path");
+  }
+
   const stack = new Error().stack?.split("\n");
   const callerInfo = stack ? stack[2] : "unknown";
 
@@ -19,7 +25,9 @@ export default function println<T>({
   const callerFunctionName = match ? match[1] : undefined;
   const callerFilePath = match ? match[2].split(":")[0] : undefined;
   const callerFileName = callerFilePath
-    ? path.basename(callerFilePath)
+    ? typeof window === "undefined"
+      ? path?.basename(callerFilePath)
+      : callerFilePath.split("/").pop()
     : undefined;
 
   const colorCode = colorCodes[color];
@@ -36,8 +44,8 @@ export default function println<T>({
 
   console.log(logMessage);
 
-  if (writeToFile) {
-    const logFilePath = path.join(__dirname, "app_logs.txt");
+  if (writeToFile && typeof window === "undefined") {
+    const logFilePath = path?.join(__dirname, "app_logs.txt");
 
     const plainLogMessage = showFunctionOrigin
       ? callerFunctionName
@@ -47,6 +55,11 @@ export default function println<T>({
         : `${helper} (called from ${callerFileName}) =>\n${formattedLog}\n\n`
       : `${helper} =>\n${formattedLog}\n\n`;
 
-    fs.appendFileSync(logFilePath, plainLogMessage, { encoding: "utf-8" });
+    try {
+      fs?.appendFileSync(logFilePath!, plainLogMessage, { encoding: "utf-8" });
+      console.log(`Log written to ${logFilePath}`);
+    } catch (error) {
+      console.error("Failed to write log to file:", error);
+    }
   }
 }
