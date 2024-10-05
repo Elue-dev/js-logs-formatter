@@ -1,35 +1,39 @@
-[data-theme="light"] {
+html[data-theme="light"] {
   --ifm-background-color: #ffffff;
   --ifm-navbar-background-color: #ffffff;
   --ifm-navbar-color: #000000;
 }
 
-[data-theme="dark"] {
+html[data-theme="light"] body,
+html[data-theme="light"] .navbar,
+html[data-theme="light"] .main-wrapper {
+  background-color: #ffffff !important;
+}
+
+html[data-theme="light"] footer {
+  background-color: #f7f7f7 !important;
+}
+
+html[data-theme="dark"] {
   --ifm-background-color: #000000;
   --ifm-navbar-background-color: #000000;
   --ifm-navbar-color: #ffffff;
+}
 
-  body {
-    background-color: #000 !important;
-  }
+html[data-theme="dark"] body,
+html[data-theme="dark"] .navbar,
+html[data-theme="dark"] .main-wrapper {
+  background-color: #000000 !important;
+}
 
-  .navbar {
-    background-color: #000 !important;
-  }
+html[data-theme="dark"] .navbar__item,
+html[data-theme="dark"] .navbar__title,
+html[data-theme="dark"] .navbar__toggle {
+  color: white !important;
+}
 
-  .navbar__item,
-  .navbar__title,
-  .navbar__toggle {
-    color: white !important;
-  }
-
-  .main-wrapper {
-    background-color: #000 !important;
-  }
-
-  footer {
-    background-color: #1c1e21 !important;
-  }
+html[data-theme="dark"] footer {
+  background-color: #1c1e21 !important;
 }
 
 :root {
@@ -44,7 +48,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --ifm-color-primary: #00aaff;
   --ifm-color-primary-dark: #0088cc;
   --ifm-color-primary-darker: #0077aa;
