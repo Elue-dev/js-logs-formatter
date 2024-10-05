@@ -1,32 +1,24 @@
-html[data-theme="dark"] {
+[data-theme="light"] {
+  --ifm-background-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-color: #000000;
+}
+
+[data-theme="dark"] {
+  --ifm-background-color: #000000;
+  --ifm-navbar-background-color: #000000;
+  --ifm-navbar-color: #ffffff;
+
   body {
     background-color: #000 !important;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background-image: url("/img/pattern.avif");
-    background-repeat: repeat-x;
-    z-index: 9999;
   }
 
   .navbar {
     background-color: #000 !important;
   }
 
-  .navbar__item {
-    color: white !important;
-  }
-
-  .navbar__title {
-    color: white !important;
-  }
-
+  .navbar__item,
+  .navbar__title,
   .navbar__toggle {
     color: white !important;
   }
@@ -37,11 +29,6 @@ html[data-theme="dark"] {
 
   footer {
     background-color: #1c1e21 !important;
-  }
-
-  /* For dark mode */
-  [data-theme="dark"] footer {
-    background-color: darkred !important;
   }
 }
 
