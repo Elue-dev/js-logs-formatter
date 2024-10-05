@@ -1,1 +1,8 @@
-/Users/nubiaville/Documents/docs/my-docs
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
