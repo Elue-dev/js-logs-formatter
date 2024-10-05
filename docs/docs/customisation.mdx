@@ -1,0 +1,114 @@
+---
+sidebar_position: 3
+---
+
+# Customising Log Outputs
+
+To customise the logs, you can add a **helper text** to help you describe what kind of logs it is eg the type of data, as well as **colors** to style the logs according to your preferences, eg **red** for logging errors
+
+**_Import statement:_**
+
+```typescript
+import { println } from "js-logs-formatter";
+```
+
+We will be using the same sample data that was used in the [Basic Usage](usage#sample-data) section.
+
+```typescript
+println({
+  helper: "User Data",
+  data: user,
+  color: "green",
+});
+```
+
+This will print out the user data to the console and the logs will alsoinclude the function name and line number hat the `println` function was called.
+
+**Output:**
+
+<pre
+  style={{
+    color: "#00FF00",
+  }}
+>
+  User Data (called from function: yourFunctionName at line yourLineNumber)
+  {`
+  {
+    "name": "Jane Doe",
+    "age": 28,
+    "active": false,
+    "email": "janedoe@example.com",
+    "phone": "+1234567890",
+    "address": {
+      "street": "123 Main St",
+      "city": "Anytown",
+      "state": "CA",
+      "zipCode": "12345"
+    },
+    "preferences": {
+      "newsletter": true,
+      "notifications": {
+        "email": true,
+        "sms": false
+      }
+    },
+    "createdAt": "2022-01-15T14:30:00Z",
+    "lastLogin": "2023-09-28T10:00:00Z",
+    "roles": [
+      "user",
+      "admin"
+    ],
+    "points": 1500
+  }
+  `}
+</pre>
+
+**_Note:_** Due to differences in how React Native handles stack traces, the accuracy of line numbers and function names can vary. While the println function captures file names and line numbers accurately in Node.js environments, in React Native, the stack trace format may include network-related information or different formatting, making line numbers less predictable. For best results, focus on the file name and function name when using this in a React Native environment.
+
+We can use the **red** colors (background colors included) to easily identify error logs:
+
+```typescript
+try {
+  loginUser();
+} catch (error) {
+  println({
+    helper: "User Data",
+    data: error.response.data.message,
+    color: "red",
+  });
+}
+```
+
+**Output:**
+
+<pre style={{ color: "#FF6B6B" }}>
+  {`
+  { 
+    "success": false, 
+    "error": "Invalid email or password"
+  }
+ `}
+</pre>
+
+Or using a **red background color**:
+
+```typescript
+try {
+  loginUser();
+} catch (error) {
+  println({
+    helper: "User Data",
+    data: error.response.data.message,
+    color: "bgRed",
+  });
+}
+```
+
+<pre style={{ backgroundColor: "#FF6F6F", color: "#000000" }}>
+  {`
+  { 
+    "success": false, 
+    "error": "Invalid email or password"
+  }
+ `}
+</pre>
