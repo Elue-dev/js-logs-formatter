@@ -32,8 +32,31 @@ html[data-theme="dark"] .navbar__toggle {
   color: white !important;
 }
 
+html[data-theme="light"] footer {
+  background-color: #f7f7f7 !important;
+}
+
+html[data-theme="light"] footer .container,
+html[data-theme="light"] footer .footer__copyright {
+  color: #000;
+}
+
+footer.footer--light .container a {
+  color: #000;
+  text-decoration: underline;
+}
+
+footer.footer--light .container a:hover {
+  color: var(--ifm-color-primary);
+}
+
 html[data-theme="dark"] footer {
   background-color: #1c1e21 !important;
+}
+
+html[data-theme="dark"] footer .container,
+html[data-theme="dark"] footer .footer__copyright {
+  color: #fff;
 }
 
 :root {
