@@ -8,7 +8,7 @@ sidebar_position: 1
 
 ## Getting Started
 
-Get started by **instaling this package using yarn or npm**.
+Get started by instaling this package using **yarn** or **npm**.
 
 ```bash
 yarn add js-logs-formatter

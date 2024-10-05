@@ -54,18 +54,9 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} JS Logs Formatter.`,
+      links: [],
+      copyright: `
+      Created with ❤️ by <a href='https://x.com/eluewisdom_'>Wisdom Elue</a>.`,
     },
     prism: {
       theme: prismThemes.github,
