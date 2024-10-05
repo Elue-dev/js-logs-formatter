@@ -1,7 +1,8 @@
 {
   "name": "js-logs-formatter",
-  "version": "0.8.2",
+  "version": "0.8.4",
   "description": "Logger library for readable server logs, useful for tools like React Native, Node.js and Next.js server components. Also useful for SPAs with browser log",
+  "homepage": "https://js-logs-formatter.vercel.app",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",

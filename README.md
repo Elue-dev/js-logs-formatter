@@ -19,13 +19,13 @@ You can install **JS Logs Formatter** via npm or yarn:
 yarn add js-logs-formatter
 ```
 
-using npm:
+**_using npm:_**
 
 ```bash
 npm install js-logs-formatter
 ```
 
-Expo
+**_Expo (React Native)_**
 
 ```bash
 npx expo install js-logs-formatter
@@ -73,7 +73,7 @@ println({
 });
 ```
 
-This will output the following to the console with a green color:
+This will output the following to the console with a **green color**:
 
 ```bash
 User Data (called from function: yourFunctionName at line yourLineNumber) =>
@@ -114,6 +114,7 @@ User Data (called from function: yourFunctionName at line yourLineNumber) =>
 // Using println without helper text, function name or color
 println({
   data: user,
+  showFunctionOrigin: false,
 });
 ```
 
