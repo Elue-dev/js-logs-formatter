@@ -7,16 +7,11 @@ const config: Config = {
   tagline: "Readable and customizable server logs for development",
   favicon: "img/js-logs-formatter.webp",
 
-  // Set the production url of your site here
-  url: "https://js-logs-formatter.vercel.app",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: "https://js-logs-formatter-docs.vercel.app",
   baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Elu-dev", // Usually your GitHub org/user name.
-  projectName: "js-logs-formatter", // Usually your repo name.
+  organizationName: "Elu-dev",
+  projectName: "js-logs-formatter",
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -27,9 +22,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl: "https://github.com/Elue-dev/js-logs-formatter",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -39,8 +31,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo.webp",
     navbar: {
       title: "JS Logs Formatter",
       logo: {
@@ -54,7 +45,6 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
-        // { to: "/blog", label: "Blog", position: "left" },
         {
           href: "https://github.com/Elue-dev/js-logs-formatter",
           label: "GitHub",
@@ -74,36 +64,6 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   title: "Community",
-        //   items: [
-        //     {
-        //       label: "Stack Overflow",
-        //       href: "https://stackoverflow.com/questions/tagged/docusaurus",
-        //     },
-        //     {
-        //       label: "Discord",
-        //       href: "https://discordapp.com/invite/docusaurus",
-        //     },
-        //     {
-        //       label: "Twitter",
-        //       href: "https://twitter.com/docusaurus",
-        //     },
-        //   ],
-        // },
-        // {
-        //   title: "More",
-        //   items: [
-        //     {
-        //       label: "Blog",
-        //       to: "/blog",
-        //     },
-        //     {
-        //       label: "GitHub",
-        //       href: "https://github.com/Elue-dev/js-logs-formatter",
-        //     },
-        //   ],
-        // },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} JS Logs Formatter.`,
     },
