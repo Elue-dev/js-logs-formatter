@@ -20,7 +20,6 @@ export default function println<T>({
   const lineNumber = callerFileParts[1] || "unknown line";
 
   const colorCode = colorCodes[color];
-
   let logMessage: string;
 
   if (showFunctionOrigin) {
