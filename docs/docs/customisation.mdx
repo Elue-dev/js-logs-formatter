@@ -72,7 +72,7 @@ try {
   loginUser();
 } catch (error) {
   println({
-    helper: "User Data",
+    helper: "loginUser error",
     data: error.response.data.message,
     color: "red",
   });
@@ -83,6 +83,7 @@ try {
 
 <pre style={{ color: "#FF6B6B" }}>
   {`
+  loginUser error
   { 
     "success": false, 
     "error": "Invalid email or password"
@@ -97,7 +98,7 @@ try {
   loginUser();
 } catch (error) {
   println({
-    helper: "User Data",
+    helper: "loginUser error",
     data: error.response.data.message,
     color: "bgRed",
   });
@@ -106,6 +107,7 @@ try {
 
 <pre style={{ backgroundColor: "#FF6F6F", color: "#000000" }}>
   {`
+  loginUser error
   { 
     "success": false, 
     "error": "Invalid email or password"

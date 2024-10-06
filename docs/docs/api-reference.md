@@ -4,6 +4,8 @@ sidebar_position: 4
 
 # API Reference
 
+Here are some props you can pass to the `println` function to customise your log outputs
+
 | **Prop**             | **Description**                                                                                            | **Default**         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------- |
 | `helper`             | A string that describes the context of the log message. It helps identify what the logged data represents. | `""` (empty string) |
