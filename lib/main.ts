@@ -8,7 +8,6 @@ export default function println<T>({
   showFunctionOrigin = true,
 }: PrintLn<T>) {
   const formattedLog = JSON.stringify(data, null, 2);
-
   const stack = new Error().stack?.split("\n");
   const callerInfo = stack ? stack[2] : "unknown";
 
