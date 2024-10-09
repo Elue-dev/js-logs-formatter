@@ -41,5 +41,4 @@ export type PrintLn<T> = {
   data: T;
   color?: LogColor;
   showFunctionOrigin?: boolean;
-  writeToFile?: boolean;
 };
